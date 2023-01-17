@@ -42,6 +42,9 @@ module.exports = {
         '8xl': '86rem',
         '9xl': '92rem',
       },
+      height: {
+        '18': '4.7rem'
+      },
       screens: {
         '2xl': '1536px',
       },

@@ -1,4 +1,4 @@
-import React, {memo} from "react";
+import React, {memo, useRef} from "react";
 import {Search} from "lucide-react";
 import SearchInput from "./components/search-input";
 import SearchDropdown from "./components/search-dropdown";
@@ -12,17 +12,18 @@ interface AdvancedSearchProps extends Pick<HTMLInputElement, "className" | "plac
 
 const AdvancedSearch = ({className, placeholder}: AdvancedSearchProps) => {
     const search = useSearch();
+    const resultRef = useRef<any>(null);
 
     return <SearchProvider value={search} >
         <div className={`relative rounded bg-gray-100 h-11 ${className}`}>
             <div className="flex items-center h-full gap-2 pl-4">
-                <SearchInput placeholder={placeholder} />
+                <SearchInput customRef={resultRef} placeholder={placeholder} />
                 <SearchDropdown items={["Books", "Cameras", "Computers", "Crafts", "Musics"]} placeholder={"Categories"} />
                 <button className={"bg-primary-400 h-full w-11 flex items-center justify-center rounded"} type={"button"}>
                     <Search className={"text-white"} size={20} />
                 </button>
             </div>
-            <ResultsPanel />
+            <ResultsPanel resultRef={resultRef} />
         </div>
     </SearchProvider>
 

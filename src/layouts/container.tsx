@@ -2,6 +2,7 @@ import React, {memo} from "react";
 import {Outlet} from "react-router-dom";
 import TopHeader from "./top-header";
 import BottomHeader from "./bottom-header";
+import SiteWidget from "../features/site-widget";
 
 type ContainerProps = {}
 
@@ -11,6 +12,7 @@ const Container = ({}: ContainerProps) => {
         <TopHeader />
         <BottomHeader />
         <Outlet />
+        <SiteWidget />
     </div>
 
 }
