@@ -1,5 +1,5 @@
 import React, {memo} from "react";
-import AdvancedSearch from "../features/advanced-search";
+import AdvancedSearch from "../features/searching";
 import HeaderButton from "../components/ui/header-button";
 import BubbleIcon from "../components/ui/bubble-icon";
 import {Heart, ShoppingCart, User} from "lucide-react";
@@ -17,7 +17,7 @@ const BottomHeader = ({}: BottomHeaderProps) => {
             <div className=" flex items-center justify-between w-full max-w-9xl mx-auto gap-4">
                 <Logo />
                 <div className="flex flex-1 items-center gap-5">
-                    <AdvancedSearch className={"flex-1"} />
+                    <AdvancedSearch placeholder={"Search a product"} className={"flex-1"} />
                     <a>
                         <HeaderButton title={"Sign In"} value={"Account"} render={<User size={26} />} />
                     </a>
