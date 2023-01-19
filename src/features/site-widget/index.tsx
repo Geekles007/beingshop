@@ -5,6 +5,7 @@ import {useMenu} from "./hooks/useMenu";
 import Menus from "./components/menus";
 import ResultsPanel from "./components/results";
 import useOutsideClick from "../../hooks/use-outside-click.hook";
+import MenuContent from "./components/menu-content";
 
 type SiteWidgetProps = {}
 
@@ -18,8 +19,10 @@ const SiteWidget = ({}: SiteWidgetProps) => {
     })
 
     return <MenuProvider value={menu}>
-        <div ref={customRef} className={`flex flex-col w-[750px] absolute bottom-4 left-1/2 rounded-md -translate-x-1/2 p-2 gap-2 bg-black/[.4] transition-all duration-500`}>
-            <ResultsPanel />
+        <div ref={customRef} className={`flex flex-col min-w-[750px] fixed bottom-4 left-1/2 rounded-md -translate-x-1/2 p-2 gap-2 bg-black/[.4] transition-all duration-500`}>
+            <ResultsPanel>
+                <MenuContent />
+            </ResultsPanel>
             <div className="flex gap-2 items-center">
                 <MenuToggler />
                 <Menus />

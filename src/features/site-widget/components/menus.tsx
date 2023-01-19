@@ -4,7 +4,7 @@ import {X} from "lucide-react";
 
 type MenusProps = {}
 
-const linkStyle = "rounded-md border border-gray-400 bg-transparent hover:bg-gray-600/[.5] transition-all duration-500 p-2 px-4 h-full text-xs flex items-center";
+const linkStyle = "rounded-md border border-gray-400/[.5] bg-transparent hover:bg-gray-600/[.5] transition-all duration-500 p-2 px-4 h-full text-xs flex items-center";
 
 const Menus = ({}: MenusProps) => {
 
