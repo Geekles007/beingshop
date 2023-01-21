@@ -2,6 +2,9 @@ import React, {memo} from "react";
 
 type ImageCardProps = {
     src?: string;
+    title?: string;
+    amount?: number;
+    discount?: number;
 }
 
 const ImageCard = ({src}: ImageCardProps) => {

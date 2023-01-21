@@ -1,7 +1,7 @@
 import {getMapInfos} from "./map-handler";
 
 const slugger = (text: string) => {
-    return text.replace(text, "-").toLocaleLowerCase()
+    return text.toLocaleLowerCase().replaceAll(" ", "-")
 }
 
 const splicer = <T>(arr: T[] = [], count: number) => {
